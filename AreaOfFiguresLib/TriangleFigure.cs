@@ -10,7 +10,6 @@ namespace AreaOfFiguresLib
     {
         private readonly List<float> _sides = new List<float>(3);
 
-
         public TriangleFigure(float a, float b, float c)
         {
             if (a < 0 || b < 0 || c < 0)
@@ -22,8 +21,7 @@ namespace AreaOfFiguresLib
             _sides.Sort();
 
             if (_sides[0] + _sides[1] < _sides[2])
-                throw new ArgumentException("Triangle doesn't exist");
-            
+                throw new ArgumentException("Triangle doesn't exist");            
         }
 
         public float Area
